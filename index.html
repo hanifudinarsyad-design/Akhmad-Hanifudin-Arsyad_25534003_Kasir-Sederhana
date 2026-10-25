@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Shopping List</h1>
+            <p>Catat belanja, kendalikan pengeluaran!</p>
+        </header>
+
+        <section class="form-box">
+            <h2>Tambah Barang</h2>
+
+            <form id="formBelanja">
+                <label for="namaBarang">Nama barang</label>
+                <input
+                    type="text"
+                    id="namaBarang"
+                    placeholder="Contoh: Beras"
+                    required
+                >
+
+                <label for="jumlah">Jumlah barang</label>
+                <input
+                    type="number"
+                    id="jumlah"
+                    min="1"
+                    step="1"
+                    placeholder="Contoh: 2"
+                    required
+                >
+
+                <label for="harga">Harga satuan (Rp)</label>
+                <input
+                    type="number"
+                    id="harga"
+                    min="0"
+                    step="1"
+                    placeholder="Contoh: 15000"
+                    required
+                >
+
+                <button type="submit">Tambah ke Daftar</button>
+            </form>
+        </section>
+
+        <section class="list-box">
+            <h2>Daftar Belanja</h2>
+
+            <div id="daftarBelanja">
+                <p class="kosong">Belum ada barang yang ditambahkan.</p>
+            </div>
+
+            <div class="ringkasan">
+                <p>Total jenis barang:
+                    <strong id="totalJenis">0</strong>
+                </p>
+                <p>Total jumlah barang:
+                    <strong id="totalJumlah">0</strong>
+                </p>
+                <p class="total-harga">Total biaya:
+                    <strong id="totalBiaya">Rp0</strong>
+                </p>
+            </div>
+
+            <button type="button" id="hapusSemua" class="btn-reset">
+                Hapus Semua
+            </button>
+        </section>
+
+        <footer>
+            <p>Program sederhana untuk membantu belanja sehari-hari.</p>
+        </footer>
+    </div>
+</body>
+</html>
